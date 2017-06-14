@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Smartmirro</title>
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="fullcalendar.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700,inherit,400" rel="stylesheet" type="text/css">
+    <link href='fullcalendar.min.css' rel='stylesheet' />
+    <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='jquery.min.js'></script>
+    <script src='moment.min.js'></script>
+    <script src='fullcalendar.min.js'></script>
+    <script src='date_time.js'></script>
+    <script src='gcal.js'></script>
+    <script src='nl.js'></script>
+    <script type='text/javascript'>
+      $(document).ready(function() {
+          $('.kalender_tabel').fullCalendar({
+              googleCalendarApiKey: 'AIzaSyCq4heAJPPC9QfoZNGXJgc7YrW0376mH6I',
+              events: {
+                  googleCalendarId: 'jimmeijer1@gmail.com'
+              }
+          });
+      });
+    </script>
+    <script>
+    function myFunction() {
+      var x = document.getElementById('Kalender');
+      if (x.style.display === 'none') {
+          x.style.display = 'block';
+      } else {
+          x.style.display = 'none';
+      }
+    }
+
+    </script>
+  </head
+  <body>
+    <div id="wrapper">
+      <div id="Kalender">
+        <h1>Kalender titel</h1>
+        <div class="kalender_tabel"></div>
+      </div><!--eind Kalender div-->
+
+      <div id="Weer">
+        <h2>Datum: </h2>
+        <span id="date_time"></span>
+        <script type="text/javascript">window.onload = date_time('date_time');</script>
+        <div class="container clearfix">
+          <p class="location"></p>
+          <p class="temperature"></p>
+          <div class="info_bg">
+            <p class="humidity"></p>
+            <div class="windspeed"></div>
+          </div>
+          <p class="voorspelling"></p>
+        </div>
+      </div><!--eind Weer div-->
+
+    </div><!--eind wrapper div-->
+
+    <div id="wrapper">
+      <div id="Nieuws">
+        <img src="images/nieuws.svg">
+        <h1>Nieuws titel</h1>
+      </div><!--eind Nieuws div-->
+
+      <div id="Whatsapp">
+        <img src="images/whatsapp.svg">
+        <h1>Whatsapp titel</h1>
+      </div><!--eind Whatsapp div-->
+
+      <div id="Maps">
+        <img src="images/maps.svg">
+        <h1>Maps titel</h1>
+      </div><!--eind Maps div-->
+	  
+	  <div id="videoFoto">
+		<h1>videoFoto titel</h1>
+	  </div>
+			  
+	  <script src='video.js'></script>
+	  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+      <script src="weer_plugin/weather.js"></script>
+    </div>
+  </body>
+</html>
